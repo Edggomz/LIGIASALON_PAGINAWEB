@@ -5,176 +5,143 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Ligia Honles Salon - Producto</title>
-  <!--////////// NOOO TOCAAR  //////////-->
-  <!-- Bootstrap CSS -->
-     <!-- La libreria de donde sacamos todas las stylesheets para hacer la pagina -->
+
+  <!-- Bootstrap: esto carga los estilos base para que todo se vea bien, asi no usamos tanto css por separado -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-  <style>
-  .section-title {
-    font-weight: bold;
-    font-size: 1.8rem;
-  }
-
-  hr.divisor {
-    width: 60px;
-    height: 3px;
-    background-color: #000;
-    border: none;
-    margin: 0 auto 1.5rem auto;
-  }
-</style>
-
+  <link rel="stylesheet" href="../css/productos.css">
 </head>
 
 <body>
-  
-  <!--ESTA ES LA BARRA DE NAVEGACION, NO LA TOQUEEEEN -->
+  <!-- Esta es la Barra de navegación. Facil y no tan complejo, pero suficiente para moverse entre las páginas del sitio -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
       <a class="navbar-brand" href="../index.html">Ligia Honles Salon</a>
-
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
-
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="../index.html">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="producto.html">Productos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="requerimientos.html">Requerimientos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contactanos.html">Contáctanos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="descarga.html">Descarga</a>
-          </li>
+          <!-- Enlaces internos. Todos apuntan a páginas dentro de la carpeta /paginas -->
+          <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="producto.html">Productos</a></li>
+          <li class="nav-item"><a class="nav-link" href="requerimientos.html">Requerimientos</a></li>
+          <li class="nav-item"><a class="nav-link" href="contactanos.html">Contáctanos</a></li>
+          <li class="nav-item"><a class="nav-link" href="descarga.html">Descarga</a></li>
         </ul>
       </div>
     </div>
   </nav>
-<!--hoover/ o vanda que va arriba -->
+  <!-- Encabezado principal/Hoover. Tiene fondo con imagen, pero hay que revisar que el path esté bien -->
   <header id="inicio" class="text-center py-5 text-black"
-    style="background-image: url('#####'); background-size: cover; background-position: center;">
-      <!-- CAMBIAR ##### por la imagen de El salon de belleza Buena Calidadd, para hacerlo chivo -->
+    style="background-image: url('../img/hoover web.svg'); background-size: cover; background-position: center;">
     <div class="container py-5">
       <h1 class="display-4 fw-bold">Ligia Honles Salon</h1>
       <p class="lead">Belleza sin límites, para todos.</p>
     </div>
   </header>
-  <!--NUESTROS SERVICIOS -->
-<section class="py-5 text-center bg-light">
-  <div class="container">
-    <h2 class="section-title">Nuestros Servicios</h2>
-    <hr class="divisor">
 
-    <!--Espacio para diseño decorativo -->
-    <div class="mb-4">
-      <!--/////// AQUI SE DEBE AGREGAR LA IMAGEN O EL ICONO QUE VAMOS A USAR PARA SERVICIOS////////-->
-      <img src="#######" alt="Icono de servicios" class="img-fluid" style="max-width: 120px;">
-    </div>
+  <!-- Sección descriptiva de servicios. Un poco de texto para explicar lo que ofrecemos -->
+  <section class="py-5 text-center bg-light">
+    <div class="container">
+      <h2 class="section-title">Nuestros Servicios</h2>
+      <hr class="divisor">
 
-    <div class="row justify-content-center">
-      <div class="col-lg-8">
-        <p class="fs-5">
-          En Ligia Honles Salon ofrecemos una gama completa de servicios de belleza diseñados para realzar la identidad y estilo de cada cliente. Nuestro equipo de profesionales altamente capacitados brinda atención personalizada en peluquería, barbería, estética facial y corporal, maquillaje, masajes, manicure, pedicure y más. Cada tratamiento está pensado para combinar técnica, bienestar y elegancia, creando una experiencia única que promueve la confianza, el cuidado personal y la satisfacción total. Creemos en un enfoque integral que une calidad, empatía y resultados visibles desde la primera visita.
-        </p>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <p class="fs-5">
+            En Ligia Honles Salon ofrecemos una gama completa de servicios de belleza diseñados para realzar la identidad y estilo de cada cliente. Nuestro equipo de profesionales altamente capacitados brinda atención personalizada en peluquería, barbería, estética facial y corporal, maquillaje, masajes, manicure, pedicure y más. Cada tratamiento está pensado para combinar técnica, bienestar y elegancia, creando una experiencia única que promueve la confianza, el cuidado personal y la satisfacción total.
+          </p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-  <!--SERVICIOS-->
+  <!-- Galería de servicios. Cada tarjeta representa un servicio que se ofrece -->
   <section id="productos" class="bg-light py-5">
     <div class="container">
       <h2 class="text-center mb-4">Servicios a Ofrecer:</h2>
       <hr class="mx-auto mb-4" style="width: 60px; height: 3px; background-color: #000; border: none;">
       <div class="row">
 
-        <!--Tarjeta de servicio -->
+        <!-- Tarjetas individuales. Se pueden duplicar o modificar según los servicios reales -->
         <div class="col-md-4 mb-4">
           <div class="card h-100">
-            <img src="../img/PRUEBA.jpg" class="card-img-top" alt="Imagen del servicio">
+            <img src="../img/CorteBarba.jpg" class="card-img-top" alt="Corte de barba">
             <div class="card-body">
-              <h5 class="card-title">Servicio 1</h5>
-              <p class="card-text">Lorem ipsum dolor sit amet.</p>
+              <h5 class="card-title">Corte de Barba</h5>
+              <p class="card-text">Estilo y precisión para un look impecable.</p>
             </div>
           </div>
         </div>
 
-                <!--Tarjeta de servicio -->
         <div class="col-md-4 mb-4">
           <div class="card h-100">
-            <img src="../img/PRUEBA.jpg" class="card-img-top" alt="Imagen del servicio">
+            <img src="../img/CorteDama.jpg" class="card-img-top" alt="Corte para dama">
             <div class="card-body">
-              <h5 class="card-title">Servicio 2</h5>
-              <p class="card-text">Lorem ipsum dolor sit amet.</p>
+              <h5 class="card-title">Corte para Dama</h5>
+              <p class="card-text">Diseños modernos y clásicos adaptados a tu estilo.</p>
             </div>
           </div>
         </div>
 
-                <!--Tarjeta de servicio -->
         <div class="col-md-4 mb-4">
           <div class="card h-100">
-            <img src="../img/PRUEBA.jpg" class="card-img-top" alt="Imagen del servicio">
+            <img src="../img/TintePelo.jpg" class="card-img-top" alt="Tinte de cabello">
             <div class="card-body">
-              <h5 class="card-title">Servicio 3</h5>
-              <p class="card-text">Lorem ipsum dolor sit amet.</p>
+              <h5 class="card-title">Tinte de Cabello</h5>
+              <p class="card-text">Color vibrante y duradero con productos profesionales.</p>
             </div>
           </div>
         </div>
 
-                <!--Tarjeta de servicio -->
         <div class="col-md-4 mb-4">
           <div class="card h-100">
-            <img src="../img/PRUEBA.jpg" class="card-img-top" alt="Imagen del servicio">
+            <img src="../img/Facial.jpg" class="card-img-top" alt="Tratamiento facial">
             <div class="card-body">
-              <h5 class="card-title">Servicio 4</h5>
-              <p class="card-text">Lorem ipsum dolor sit amet.</p>
+              <h5 class="card-title">Tratamiento Facial</h5>
+              <p class="card-text">Limpieza profunda y revitalización para tu piel.</p>
             </div>
           </div>
         </div>
 
-                <!--Tarjeta de servicio -->
         <div class="col-md-4 mb-4">
           <div class="card h-100">
-            <img src="../img/PRUEBA.jpg" class="card-img-top" alt="Imagen del servicio">
+            <img src="../img/LavadoCabello.jpg" class="card-img-top" alt="Lavado de cabello">
             <div class="card-body">
-              <h5 class="card-title">Servicio 5</h5>
-              <p class="card-text">Lorem ipsum dolor sit amet.</p>
+              <h5 class="card-title">Lavado de Cabello</h5>
+              <p class="card-text">Relajación y cuidado con productos de alta calidad.</p>
             </div>
           </div>
         </div>
-        <!-- ////////// PHONK PODES COPIAR ESTO PARA HACER TANTO PRODUCTOS COMO QUERAS PARA TENERLOS TODOS //////////-->
+
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <img src="../img/CortePelo.jpg" class="card-img-top" alt="Corte de cabello">
+            <div class="card-body">
+              <h5 class="card-title">Corte de Cabello</h5>
+              <p class="card-text">Estilo personalizado para cada tipo de rostro.</p>
+            </div>
+          </div>
+        </div>
 
       </div>
     </div>
   </section>
 
-  <!--FOOTER -->
-  <!--//////////////////// PHONK NECESITO QUE PONGAS LOS ENLACES DE NUESTRAS REDES SOCIALES AQUI y en todas las paginas ///////////////-->
-<footer class="bg-dark text-white text-center py-4 mt-5">
+  <!--Pie de página, los enlaces para contacto y redes sociales/Footer -->
+  <footer class="bg-dark text-white text-center py-4 mt-5">
     <div class="container">
       <p class="mb-2">Síguenos en redes sociales</p>
-      <a href="#" class="text-white me-3"><i class="bi bi-instagram"></i></a>
-      <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
-      <a href="#" class="text-white me-3"><i class="bi bi-envelope"></i></a>
-      <a href="#" class="text-white"><i class="bi bi-whatsapp"></i></a>
+      <a href="https://www.instagram.com/ligia.salon/" class="text-white me-3"><i class="bi bi-instagram"></i></a>
+      <a href="https://www.facebook.com/ligiahonlessalon/" class="text-white me-3"><i class="bi bi-facebook"></i></a>
+      <a href="mailto:ligiasalon5@gmail.com" target="_blank" class="text-white me-3"><i class="bi bi-envelope"></i></a>
+      <a href="https://api.whatsapp.com/send?phone=50379893306" class="text-white"><i class="bi bi-whatsapp"></i></a>
       <hr class="bg-white mt-4">
       <p class="mb-0">© 2025; Designed by LigiaHonlesSalon</p>
     </div>
   </footer>
 
-  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 

@@ -4,17 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Ligia Honles Salon - Contáctanos</title>
-  <!--////////// NOOO TOCAAR  //////////-->
-  <!-- Bootstrap CSS -->
-     <!-- La libreria de donde sacamos todas las stylesheets para hacer la pagina -->
+  <!-- Bootstrap: esto carga los estilos base para que todo se vea bien, asi no usamos tanto css por separado -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
 </head>
 
 <body>
 
-  <!--ESTA ES LA BARRA DE NAVEGACION, NO LA TOQUEEEEN -->
+  <!-- Esta es la Barra de navegación. Facil y no tan complejo, pero suficiente para moverse entre las páginas del sitio -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
       <a class="navbar-brand" href="../index.html">Ligia Honles Salon</a>
@@ -24,6 +23,7 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
+          <!-- Enlaces internos. Todos apuntan a páginas dentro de la carpeta /paginas -->
           <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
           <li class="nav-item"><a class="nav-link" href="producto.html">Productos</a></li>
           <li class="nav-item"><a class="nav-link" href="requerimientos.html">Requerimientos</a></li>
@@ -33,81 +33,82 @@
       </div>
     </div>
   </nav>
-
-<!--hoover/ o vanda que va arriba -->
+  <!-- Encabezado principal/Hoover. Tiene fondo con imagen, pero hay que revisar que el path esté bien -->
   <header id="inicio" class="text-center py-5 text-black"
-    style="background-image: url('#####'); background-size: cover; background-position: center;">
-      <!-- CAMBIAR ##### por la imagen de El salon de belleza Buena Calidadd, para hacerlo chivo -->
+    style="background-image: url('../img/hoover\ web.svg'); background-size: cover; background-position: center;">
     <div class="container py-5">
       <h1 class="display-4 fw-bold">Ligia Honles Salon</h1>
       <p class="lead">Belleza sin límites, para todos.</p>
     </div>
   </header>
 
-  <!--CONTACTO -->
-    <!--ESTE ES EL FORMULARIO DE CONTACTACION-->
-      <!--TENEMOS QUE AGREGAR A DONDE SE DEBERA ENVIAR LOS FORMULARIOS QUE SE CREES PORQUE NO ESTA PUESTO. -->
-  <section id="contacto" class="py-5">
-    <div class="container text-center">
-      <h2>Contáctanos</h2>
-      <hr class="mx-auto mb-4" style="width: 60px; height: 3px; background-color: #000; border: none;">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+ <!-- Contact Form Section/ Aqui inicia la seccion de Contactanos -->
+<section id="contacto" class="py-5">
+  <div class="container text-center">
+    <h2>Contáctanos</h2>
+    <hr class="mx-auto mb-4" style="width: 60px; height: 3px; background-color: #000; border: none;">
+    <p>Si deseas comunicarte con nosotros, completa el siguiente formulario o usa cualquiera de nuestras redes sociales.</p>
 
-      <div class="container mt-4">
-        <form id="formularioContacto" class="row g-3 needs-validation" novalidate>
-          <div class="col-md-6">
-            <label for="nombre" class="form-label">Nombre Completo</label>
-            <input type="text" class="form-control" id="nombre" required>
-            <div class="invalid-feedback">Por favor ingresa tu nombre.</div>
-          </div>
-
-          <div class="col-md-6">
-            <label for="correo" class="form-label">Correo Electrónico</label>
-            <input type="email" class="form-control" id="correo" required>
-            <div class="invalid-feedback">Por favor ingresa un correo válido.</div>
-          </div>
-
-          <div class="col-md-6">
-            <label for="telefono" class="form-label">Número de Teléfono</label>
-            <input type="text" class="form-control" id="telefono" placeholder="0000-0000" required>
-            <div class="invalid-feedback">Por favor ingresa tu número de teléfono.</div>
-          </div>
-
-          <div class="col-12">
-            <label for="comentarios" class="form-label">Comentarios</label>
-            <textarea class="form-control" id="comentarios" rows="4" required></textarea>
-            <div class="invalid-feedback">Por favor escribe un comentario.</div>
-          </div>
-
-          <div class="col-12 text-center mt-4">
-            <button type="submit" class="btn btn-success me-2">Enviar</button>
-            <button type="reset" class="btn btn-danger">Borrar</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <!--MODAL DE ÉXITO -->
-  <div class="modal fade" id="modalExito" tabindex="-1" aria-labelledby="modalExitoLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content text-center">
-        <div class="modal-body">
-          <i class="bi bi-check-circle-fill text-success" style="font-size: 3rem;"></i>
-          <h4 class="mt-3">Formulario Enviado</h4>
-          <p>¡Tu mensaje ha sido enviado exitosamente!</p>
-          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Aceptar</button>
+    <div class="container mt-4">
+      <form id="formularioContacto" class="row g-3 needs-validation" novalidate>
+        <!-- Full Name Field: only letters allowed, max 75 characters/ El nombre del usuario con el que se enviara el Formulario-->
+        <div class="col-md-6">
+          <label for="nombre" class="form-label">Nombre Completo</label>
+          <input type="text" class="form-control" id="nombre" maxlength="75" pattern="^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$" required>
+          <div class="invalid-feedback">El nombre debe contener solo letras y no exceder los 75 caracteres.</div>
         </div>
+
+        <!-- Email Field: must be valid format and between 15–75 characters/ Campo donde el usuario sampa su Email en el formulario -->
+        <div class="col-md-6">
+          <label for="correo" class="form-label">Correo Electrónico</label>
+          <input type="email" class="form-control" id="correo" minlength="15" maxlength="75" required>
+          <div class="invalid-feedback">Ingresa un correo válido</div>
+        </div>
+
+        <!-- Phone Field: only digits, max 15 characters/ Este es el campo donde el usuario Pone su numero de telefono en el formulario -->
+        <div class="col-md-6">
+          <label for="telefono" class="form-label">Número de Teléfono</label>
+          <input type="tel" class="form-control" id="telefono" pattern="^[0-9]{8,15}$" maxlength="15" placeholder="0000-0000" required>
+          <div class="invalid-feedback">Ingresa un número válido entre 8 y 15 dígitos.</div>
+        </div>
+
+        <!-- Comments Field/La seccion de Comentarios del formulario -->
+        <div class="col-12">
+          <label for="comentarios" class="form-label">Comentarios</label>
+          <textarea class="form-control" id="comentarios" rows="4" required></textarea>
+          <div class="invalid-feedback">Este campo no puede estar vacío.</div>
+        </div>
+
+        <!-- Submit and Reset Buttons/ Estos son los Botones de Enviar y Borrar El formulario -->
+        <div class="col-12 text-center mt-4">
+          <button type="submit" class="btn btn-success me-2">Enviar</button>
+          <button type="reset" class="btn btn-danger">Borrar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Success modal/ la alerta al mandar el formulario -->
+<div class="modal fade" id="modalExito" tabindex="-1" aria-labelledby="modalExitoLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content text-center">
+      <div class="modal-body">
+        <i class="bi bi-check-circle-fill text-success" style="font-size: 3rem;"></i>
+        <h4 class="mt-3">Formulario Enviado</h4>
+        <p>¡Tu mensaje ha sido enviado exitosamente!</p>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Aceptar</button>
       </div>
     </div>
   </div>
-<!--UBICACIÓN / MAPA -->
+</div>
+<!--UBICACION / MAPA -->
 <section id="ubicacion" class="py-5 bg-light">
   <div class="container text-center">
     <h2>Nuestra Sucursal</h2>
     <p>Encuéntranos en San Salvador, El Salvador.</p>
 
-    <!--Mapa incrustado desde Google Maps -->
+    <!--Mapa del local real sacado e incrustado desde Google Maps -->
     <div class="ratio ratio-16x9">
       <iframe 
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124030.15698473665!2d-89.29777679703066!3d13.72193674887695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f632fd12d4cded7%3A0x57c7e863d8915905!2sLigia%20Honles%20Sal%C3%B3n!5e0!3m2!1ses!2ssv!4v1759087038781!5m2!1ses!2ssv" 
@@ -123,42 +124,23 @@
 </section>
 
 
-  <!--FOOTER -->
-  <!--//////////////////// PHONK NECESITO QUE PONGAS LOS ENLACES DE NUESTRAS REDES SOCIALES AQUI y en todas las paginas ///////////////-->
-  <footer class="bg-dark text-white text-center py-4 mt-5">
-    <div class="container">
-      <p class="mb-2">Síguenos en redes sociales</p>
-      <a href="#" class="text-white me-3"><i class="bi bi-instagram"></i></a>
-      <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
-      <a href="#" class="text-white me-3"><i class="bi bi-envelope"></i></a>
-      <a href="#" class="text-white"><i class="bi bi-whatsapp"></i></a>
-      <hr class="bg-white mt-4">
-      <p class="mb-0">© 2025; Designed by LigiaHonlesSalon</p>
-    </div>
-  </footer>
-             <!--///// SCRIPT DE EL FORMULARIO, EL CUAL VALIDA LA INFO DE LOS FORMULARIOS /////-->
-  <!-- /////////////// ESTE SCRIPT SOLO TOCAR SI SABES LO QUE HACES, SI NO NO LO TOQUES /////////////// -->
-  <!-- Bootstrap JS -->
+  <!-- Este es el footer para las redes y el copyright -->
+<footer class="bg-dark text-white text-center py-4 mt-5">
+  <div class="container">
+    <p class="mb-2">Síguenos en nuestras redes sociales o contáctanos directamente</p>
+    <a href="https://www.instagram.com/ligia.salon/" class="text-white me-3"><i class="bi bi-instagram"></i></a>
+    <a href="https://www.facebook.com/ligiahonlessalon/" class="text-white me-3"><i class="bi bi-facebook"></i></a>
+    <a href="mailto:ligiasalon5@gmail.com" target="_blank" class="text-white me-3"><i class="bi bi-envelope"></i></a>
+    <a href="https://api.whatsapp.com/send?phone=50379893306" class="text-white"><i class="bi bi-whatsapp"></i></a>
+    <hr class="bg-white mt-4">
+    <p class="mb-0">© 2025; Designed by LigiaHonlesSalon</p>
+  </div>
+</footer>
+
+ <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-  <!-- VALIDACIÓN Y MODAL -->
-  <script>
-    const form = document.getElementById('formularioContacto');
-
-    form.addEventListener('submit', function (event) {
-      event.preventDefault();
-      event.stopPropagation();
-
-      if (!form.checkValidity()) {
-        form.classList.add('was-validated');
-      } else {
-        form.classList.remove('was-validated');
-        const modal = new bootstrap.Modal(document.getElementById('modalExito'));
-        modal.show();
-        form.reset();
-      }
-    });
-  </script>
+  <!-- Script de la validacion, porque asi es mas limpio el coidigo -->
+  <script src="../js/formValidation.js"></script>
 </body>
 
 </html>

@@ -5,141 +5,134 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Ligia Honles Salon - Inicio</title>
-  <!--////////// NOOO TOCAAR  //////////-->
-  <!-- Bootstrap CSS -->
-     <!-- La libreria de donde sacamos todas las stylesheets para hacer la pagina -->
+
+  <!-- Bootstrap: esto carga los estilos base para que todo se vea bien, asi no usamos tanto css por separado -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 
 <body>
-  <!--///// ESTA ES LA BARRA DE NAVEGACION, NO LA TOQUEEEEN /////-->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <!-- Esta es la Barra de navegación. Facil y no tan complejo, pero suficiente para moverse entre las páginas del sitio -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-      <a class="navbar-brand" href="../index.html">Ligia Honles Salon</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <a class="navbar-brand" href="index.html">Ligia Honles Salon</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="./index.html">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="./paginas/producto.html">Productos</a></li>
-          <li class="nav-item"><a class="nav-link" href="./paginas/requerimientos.html">Requerimientos</a></li>
-          <li class="nav-item"><a class="nav-link" href="./paginas/contactanos.html">Contáctanos</a></li>
-          <li class="nav-item"><a class="nav-link" href="./paginas/descarga.html">Descarga</a></li>
+          <!-- Enlaces internos. Todos apuntan a páginas dentro de la carpeta /paginas -->
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="paginas/producto.html">Productos</a></li>
+          <li class="nav-item"><a class="nav-link" href="paginas/requerimientos.html">Requerimientos</a></li>
+          <li class="nav-item"><a class="nav-link" href="paginas/contactanos.html">Contáctanos</a></li>
+          <li class="nav-item"><a class="nav-link" href="paginas/descarga.html">Descarga</a></li>
         </ul>
       </div>
     </div>
   </nav>
-
-<!--hoover/ o vanda que va arriba-->
+  <!-- Encabezado principal/Hoover. Tiene fondo con imagen, pero hay que revisar que el path esté bien -->
   <header id="inicio" class="text-center py-5 text-black"
-    style="background-image: url('#####'); background-size: cover; background-position: center;">
-      <!-- CAMBIAR ##### por la imagen de El salon de belleza Buena Calidadd, para hacerlo chivo -->
+    style="background-image: url('img/hoover web.svg'); background-size: cover; background-position: center;">
     <div class="container py-5">
       <h1 class="display-4 fw-bold">Ligia Honles Salon</h1>
       <p class="lead">Belleza sin límites, para todos.</p>
     </div>
   </header>
 
-<!--SECCIÓN QUIÉNES SOMOS-->
-<section id="quienes-somos" class="py-5 bg-light">
-  <div class="container text-center">
-    <h2 class="mb-3">¿Quiénes Somos?</h2>
-    <hr class="mx-auto mb-4" style="width: 60px; height: 3px; background-color: #000; border: none;">
-    <div class="row justify-content-center">
-      <div class="col-lg-8">
-        <p class="fs-5">
-          En Ligia Salon, ofrecemos un conjunto integral de servicios de belleza para hombres y mujeres, sin restricciones. Nuestro objetivo principal es brindar una atención personalizada que resalte la belleza única de cada cliente, combinando técnica, estilo y bienestar.
-          Nos especializamos en tratamientos completos que incluyen peluquería, barbería, estética facial y corporal, manicure, pedicure, colorimetría, masajes, depilación, maquillaje profesional, y mucho más.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!--CARRUSEL DE IMÁGENES -->
-<section class="py-5 bg-white">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-10">
-        <div id="carouselExample" class="carousel slide shadow rounded" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="./img/FOTO MALA-PRUEBA.jpg" class="d-block w-100" alt="Imagen del salón 1">
-            </div>
-            <div class="carousel-item">
-              <img src="./img/FOTO MALA2-PRUEBA.jpg" class="d-block w-100" alt="Imagen del salón 2">
-            </div>
-            <!-- Puedes agregar más imágenes aquí -->
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-            <span class="carousel-control-next-icon"></span>
-          </button>
+  <!-- Sección de presentación. Un poco de texto para explicar quiénes somos -->
+  <section id="quienes-somos" class="py-5 bg-light">
+    <div class="container text-center">
+      <h2 class="mb-3">¿Quiénes Somos?</h2>
+      <hr class="mx-auto mb-4" style="width: 60px; height: 3px; background-color: #000; border: none;">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <p class="fs-5">
+            En Ligia Salon, ofrecemos un conjunto integral de servicios de belleza para hombres y mujeres, sin restricciones. Nuestro objetivo principal es brindar una atención personalizada que resalte la belleza única de cada cliente, combinando técnica, estilo y bienestar. Nos especializamos en tratamientos completos que incluyen peluquería, barbería, estética facial y corporal, manicure, pedicure, colorimetría, masajes, depilación, maquillaje profesional, y mucho más.
+          </p>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
+  <!-- Carrusel de imágenes. No tiene texto encima, pero muestra fotos del salón y se mueve yujuu-->
+  <section class="py-5 bg-white">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div id="carouselExample" class="carousel slide shadow rounded" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="img/OK.svg" class="d-block w-100" alt="Imagen del salón 1">
+              </div>
+              <div class="carousel-item">
+                <img src="img/OK (3).svg" class="d-block w-100" alt="Imagen del salón 2">
+              </div>
+              <!-- Si se agregan más imágenes, seguir el mismo formato -->
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <!-- ESTA ES LA SECCCION DE MISIÓN Y VISIÓN -->
+  <!-- Misión y Visión. Dos bloques con imagen a la derecha y texto centrado se puede aumentar el texto! -->
   <section class="py-5 bg-light">
     <div class="container">
 
-      <!-- AQUI VA LO REFERIDO A LA  PARTE DE VISIÓN -->
+      <!-- Visión. Se supone que esto es lo que el salón quiere lograr a largo plazo -->
       <div class="row align-items-center mb-5">
         <div class="col-md-7 text-center">
           <h3 class="mb-3">Visión</h3>
           <hr class="mx-auto mb-4" style="width: 60px; height: 3px; background-color: #000; border: none;">
           <p>
-            Ser reconocidos como líderes en la transformación del bienestar estético y emocional, ofreciendo soluciones innovadoras y personalizadas que empoderen a cada persona a descubrir y potenciar su belleza única.
-            Aspiramos a crear comunidades más seguras, confiadas y conectadas, donde el cuidado personal sea una prioridad.
+            Ser reconocidos como líderes en la transformación del bienestar estético y emocional, ofreciendo soluciones innovadoras y personalizadas que empoderen a cada persona a descubrir y potenciar su belleza única. Aspiramos a crear comunidades más seguras, confiadas y conectadas, donde el cuidado personal sea una prioridad.
           </p>
         </div>
         <div class="col-md-5">
-          <img src="./img/PRUEBA.jpg" alt="Imagen visión" class="img-fluid rounded shadow-sm">
+          <img src="img/TijerasSites.jpg" alt="Imagen visión" class="img-fluid rounded shadow-sm">
         </div>
       </div>
 
       <hr class="my-4">
 
-      <!-- AQUI ESTA TODO LO  QUE VA EN LA  MISIÓN -->
+      <!-- Misión. Esto es lo que hacemos para cumplir con la visión -->
       <div class="row align-items-center">
         <div class="col-md-7 text-center">
           <h3 class="mb-3">Misión</h3>
           <hr class="mx-auto mb-4" style="width: 60px; height: 3px; background-color: #000; border: none;">
           <p>
-            Ser el salón de belleza de referencia para hombres y mujeres de todas las edades, promoviendo el bienestar físico, emocional y estético.
-            A través de servicios especializados buscamos fortalecer la autoestima y fomentar el desarrollo integral de cada individuo.
+            Ser el salón de belleza de referencia para hombres y mujeres de todas las edades, promoviendo el bienestar físico, emocional y estético. A través de servicios especializados buscamos fortalecer la autoestima y fomentar el desarrollo integral de cada individuo.
           </p>
         </div>
         <div class="col-md-5">
-          <img src="./img/PRUEBA.jpg" alt="Imagen misión" class="img-fluid rounded shadow-sm">
+          <img src="img/BarberiaSites.jpg" alt="Imagen misión" class="img-fluid rounded shadow-sm">
         </div>
       </div>
 
     </div>
   </section>
-  <!--FOOTER -->
-  <!--//////////////////// PHONK NECESITO QUE PONGAS LOS ENLACES DE NUESTRAS REDES SOCIALES AQUI y en todas las paginas ///////////////-->
+
+  <!-- Footer. Aquí van los enlaces a redes sociales y el correo de contacto -->
   <footer class="bg-dark text-white text-center py-4 mt-5">
     <div class="container">
       <p class="mb-2">Síguenos en redes sociales</p>
-      <a href="#" class="text-white me-3"><i class="bi bi-instagram"></i></a>
-      <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
-      <a href="#" class="text-white me-3"><i class="bi bi-envelope"></i></a>
-      <a href="#" class="text-white"><i class="bi bi-whatsapp"></i></a>
+      <a href="https://www.instagram.com/ligia.salon/" class="text-white me-3"><i class="bi bi-instagram"></i></a>
+      <a href="https://www.facebook.com/ligiahonlessalon/" class="text-white me-3"><i class="bi bi-facebook"></i></a>
+      <a href="mailto:ligiasalon5@gmail.com" class="text-white me-3"><i class="bi bi-envelope"></i></a>
+      <a href="https://api.whatsapp.com/send?phone=50379893306" class="text-white"><i class="bi bi-whatsapp"></i></a>
       <hr class="bg-white mt-4">
       <p class="mb-0">© 2025; Designed by LigiaHonlesSalon</p>
     </div>
   </footer>
 
-  <!-- Bootstrap JS -->
+  <!-- Bootstrap JS. Esto hace que el carrusel y el menú funcionen bien -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
