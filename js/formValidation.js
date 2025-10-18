@@ -1,25 +1,54 @@
-// --- Form Validation Script ---
-// maneja el envio del formulario
-// No hace nada complejo va, pero al menos valida y muestra el modal bonito.
+// --- Form Validation & Email Sending Script ---
+// Valida el formulario y envía los datos al servidor PHP para enviar el correo
 
-const form = document.getElementById('formularioContacto');
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('formularioContacto');
 
-// Aquí escuchamos el evento submit del formulario, nada complicado.
-form.addEventListener('submit', function (event) {
-  event.preventDefault(); // esto de aqui Evita el envío automático del formulario.
-  event.stopPropagation(); // aqui lo que hace es previene propagación del evento, por si acaso.
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
+    event.stopPropagation();
 
-  // Validamos los campos del formulario según las reglas que defini en el HTML 
-  // lo de los numeros, letras y la cantidad de caracteres.
-  if (!form.checkValidity()) {
-    form.classList.add('was-validated'); // Se marca el formulario como "validado" para Bootstrap.
-  } else {
-    form.classList.remove('was-validated'); // Limpia la clase si ya estaba puesta ya.
+    // Validación con Bootstrap
+    if (!form.checkValidity()) {
+      form.classList.add('was-validated');
+      return;
+    }
 
-    // Aquí idealmente se enviaría la información al servidor, aunque aún no lo hace porque no he hecho lo de Node.js .
-    // Quizá en otra version se integre con PHP o Node.js.
-    const modal = new bootstrap.Modal(document.getElementById('modalExito'));
-    modal.show(); // Muestra el mensaje de éxito, aunque el correo no se haya mandado de verdad.
-    form.reset(); // Limpia todos los campos del formulario.
+    form.classList.remove('was-validated');
+
+    // Recoge los datos del formulario
+    const formData = new FormData(form);
+
+    // Enviar los datos al servidor PHP
+    fetch(form.action, {
+      method: 'POST',
+      body: formData
+    })
+    .then(response => response.text())
+    .then(data => {
+      if (data.trim() === "ok") {
+        const modal = new bootstrap.Modal(document.getElementById('modalExito'));
+        modal.show();
+        form.reset();
+      } else {
+        mostrarError("Hubo un problema al enviar el formulario. Intenta más tarde.");
+      }
+    })
+    .catch(error => {
+      console.error("Error de conexión:", error);
+      mostrarError("No se pudo conectar con el servidor. Verifica tu conexión.");
+    });
+  });
+
+  // Función para mostrar alertas de error
+  function mostrarError(mensaje) {
+    const alerta = document.createElement('div');
+    alerta.className = 'alert alert-danger mt-3';
+    alerta.textContent = mensaje;
+    form.appendChild(alerta);
+
+    setTimeout(() => {
+      alerta.remove();
+    }, 5000);
   }
 });

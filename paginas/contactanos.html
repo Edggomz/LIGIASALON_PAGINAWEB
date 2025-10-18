@@ -35,7 +35,7 @@
   </nav>
   <!-- Encabezado principal/Hoover. Tiene fondo con imagen, pero hay que revisar que el path esté bien -->
   <header id="inicio" class="text-center py-5 text-black"
-    style="background-image: url('../img/hoover\ web.svg'); background-size: cover; background-position: center;">
+    style="background-image: url('../img/hoover web.svg'); background-size: cover; background-position: center;">
     <div class="container py-5">
       <h1 class="display-4 fw-bold">Ligia Honles Salon</h1>
       <p class="lead">Belleza sin límites, para todos.</p>
@@ -50,7 +50,7 @@
     <p>Si deseas comunicarte con nosotros, completa el siguiente formulario o usa cualquiera de nuestras redes sociales.</p>
 
     <div class="container mt-4">
-      <form id="formularioContacto" class="row g-3 needs-validation" novalidate>
+      <form id="formularioContacto" class="row g-3 needs-validation" method="POST" action="enviarCorreo.php" novalidate>
         <!-- Full Name Field: only letters allowed, max 75 characters/ El nombre del usuario con el que se enviara el Formulario-->
         <div class="col-md-6">
           <label for="nombre" class="form-label">Nombre Completo</label>
